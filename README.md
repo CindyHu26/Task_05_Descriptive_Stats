@@ -69,7 +69,7 @@ To determine the most improved player, one would need to compare statistics from
 
 ---
 
-### 3.3 Copilot (2025-07-18, Version Unspecified)
+### 3.3 Copilot (2025-07-22, Version Unspecified)
 
 #### **Copilot-Generated Summary:**
 
@@ -134,8 +134,7 @@ To determine the most improved player, one would need to compare statistics from
 
 ## 7. Credits
 
-- Project by [Your Name/Team]
 - Data: cuse.com, Syracuse University Women’s Basketball (2024-25)
-- LLM analysis: ChatGPT-4.1, Gemini 2.5 Pro, Copilot (2025-07-18)
+- LLM analysis: ChatGPT-4.1, Gemini 2.5 Pro, Copilot (2025-07-22)
 
 ---
