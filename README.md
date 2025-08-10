@@ -138,3 +138,84 @@ To determine the most improved player, one would need to compare statistics from
 - LLM analysis: ChatGPT-4.1, Gemini 2.5 Pro, Copilot (2025-07-22)
 
 ---
+
+## 8. Extended Comparative Analysis — GPT-5 vs Gemini 2.5 Pro vs Copilot
+
+This section extends the original Task 05 analysis by adding derived performance metrics, calculated directly from the dataset, and comparing how each LLM handled them.
+
+### 8.1 Derived Team Performance Metrics
+
+| Metric | Ground Truth (calculated) | GPT-5 | Gemini 2.5 Pro | Copilot |
+|--------|---------------------------|-------|----------------|---------|
+| **Average Point Differential (Season)** | –0.9 PPG | Matched | Matched | Matched |
+| **Average Point Differential (Conference)** | –6.3 PPG | Matched | Matched | –6.2 (rounding diff) |
+| **Best Win Margin** | +35 vs Dartmouth (87–52) | Correct | Correct | +24 vs Niagara (incorrect) |
+| **Smallest Win Margin** | +5 vs Miami (FL) | Correct | Correct | Correct |
+| **Home Avg Point Differential** | +5.3 PPG | Correct | +5.3 | ~+1.0 (incorrect) |
+| **Away Avg Point Differential** | –9.5 PPG | Correct | –10.5 (close) | ~–7.0 (incorrect) |
+
+**Observation:**  
+- GPT-5 and Gemini were generally accurate on derived stats, with Gemini’s away differential slightly off due to possible rounding or grouping.
+- Copilot’s “Best Win Margin” and home/away differentials diverged from computed values, likely due to simplified or incorrect internal calculations.
+
+---
+
+### 8.2 Individual Player Metrics (min. 50 attempts for 3PT%)
+
+**3-Point Percentage Leaders**
+| Player | 3PT% | GPT-5 | Gemini 2.5 Pro | Copilot |
+|--------|------|-------|----------------|---------|
+| Sophie Burrows | 39.6% | ✓ | ✓ | ✓ |
+| Georgia Woolley | 34.1% | ✓ | ✓ | ✓ |
+| Dominique Camp | 32.7% | ✓ | ✓ | ✓ |
+| Madeline Potts (48 att.) | 37.5% | Below threshold | Below threshold | Listed but noted below threshold |
+
+**Assist-to-Turnover Ratio Leaders**
+| Player | A/T Ratio | GPT-5 | Gemini 2.5 Pro | Copilot |
+|--------|-----------|-------|----------------|---------|
+| Dominique Camp | 2.21 | ✓ | ✓ | ✓ |
+| Olivia Schmitt | 1.56 | ✓ | ✓ | ✓ |
+| Angelica Velez | 1.24 | ✓ | ✓ | ✓ |
+| Georgia Woolley | 1.04 | Mentioned as 4th | Not listed | Listed |
+
+**Observation:**  
+- All three models aligned on leaders meeting thresholds, but Copilot occasionally included players slightly below the defined cut-off (e.g., Potts) or expanded the list to marginal cases (e.g., Woolley in A/T).
+
+---
+
+### 8.3 “Most Improved Player” Handling
+
+| Model | Response | Comment |
+|-------|----------|---------|
+| GPT-5 | Explicitly stated cannot determine without prior season stats | Statistically correct |
+| Gemini 2.5 Pro | Same as GPT-5, noted need for year-over-year comparison | Statistically correct |
+| Copilot | Named Georgia Woolley based on current-season volume and minutes | Subjective assumption, not meeting improvement definition |
+
+**Observation:**  
+GPT-5 and Gemini adhered to a rigorous data requirement. Copilot’s approach was faster but not statistically robust.
+
+---
+
+### 8.4 Interpretation of “Most Impressive / Toughest” Win
+
+- **GPT-5:** Provided both smallest-margin win (Miami +5) and a quality-context win (Virginia Tech road win).
+- **Gemini:** Highlighted Virginia Tech win with detailed game context.
+- **Copilot:** Chose Missouri win (82–59) as “strongest opponent defeated,” implying an opponent-strength criterion without explicit ranking data.
+
+**Observation:**  
+This illustrates how LLMs interpret subjective terms differently if the prompt does not define evaluation criteria.
+
+---
+
+### 8.5 Key Takeaways from Extended Comparison
+
+1. **Numerical Accuracy:** GPT-5 and Gemini were more precise on derived calculations; Copilot occasionally deviated.
+2. **Threshold Handling:** GPT-5 and Gemini respected defined stat thresholds; Copilot sometimes included marginal cases.
+3. **Analytical Rigor:** GPT-5 and Gemini flagged missing data for improvement metrics; Copilot filled the gap with an assumption.
+4. **Narrative vs Modular Style:**  
+   - GPT-5: Modular Q&A plus analytical notes  
+   - Gemini: Cohesive narrative summary  
+   - Copilot: Bullet-point brevity, faster but with occasional factual variance
+5. **Subjectivity in “Impressive Wins”:** Varies greatly unless prompt specifies evaluation criteria.
+
+---
