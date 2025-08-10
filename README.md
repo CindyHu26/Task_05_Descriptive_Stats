@@ -219,3 +219,7 @@ This illustrates how LLMs interpret subjective terms differently if the prompt d
 5. **Subjectivity in “Impressive Wins”:** Varies greatly unless prompt specifies evaluation criteria.
 
 ---
+
+### Credits for Extended Analysis
+- **Data Source:** 2024–25 Syracuse University Women’s Basketball official cumulative statistics and game log  
+- **LLMs Compared:** GPT-5 (OpenAI), Gemini 2.5 Pro (Google, July 2025), Copilot (Microsoft, generated Aug 10, 2025; version unspecified) 
